@@ -6,11 +6,10 @@ pipeline {
             steps {
                 sh '''
                     echo "without docker"
-                    ls -la
                 '''
             }
         }
-         stage('with docker') {
+         stage('Build') {
              agent {
                  docker {
                      image 'python:3.12'
@@ -19,8 +18,8 @@ pipeline {
              }
             steps {
                 sh '''
-                    echo "with docker"
                     ls -la
+                    python --version
                 '''
             }
         }
