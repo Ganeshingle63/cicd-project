@@ -11,11 +11,16 @@ pipeline {
         }
          stage('Build') {
              agent {
-                 docker {
-                    image 'Dockerfile'
-                    reuseNode true
-                 }
-             }
+                //  docker {
+                //     image 'Dockerfile'
+                //     reuseNode true
+                //  }
+                dockerfile {
+                    filename 'Dockerfile'
+                    dir '.'
+                    label 'docker-agent'
+                }
+             }  
             steps {
                 sh '''
                     ls -la
