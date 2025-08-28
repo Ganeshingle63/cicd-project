@@ -18,7 +18,6 @@ pipeline {
                 dockerfile {
                     filename 'Dockerfile'
                     dir '.'
-                    label 'docker-agent'
                 }
              }  
             steps {
