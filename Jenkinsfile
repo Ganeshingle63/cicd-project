@@ -35,7 +35,7 @@ pipeline {
 
     environment {
         PROJECT_ID = 'shaped-aegis-387005'
-        REGION = 'us-central1'
+        REGION = 'us-east1'
         REPO_NAME = 'cicd-project'
         IMAGE_NAME = 'my-python-app'
         IMAGE_TAG = 'latest'
