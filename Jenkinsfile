@@ -12,7 +12,7 @@ pipeline {
          stage('Build') {
              agent {
                  docker {
-                    filename 'Dockerfile'
+                    image 'Dockerfile'
                     reuseNode true
                  }
              }
